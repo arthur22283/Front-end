@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Book</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/rounded-favicn.png">
+    <link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+
+<body>
+    <header id="topo">
+        <figure id="logo"></figure>
+        <button id="btn-menu"><a href="#menu"><i class="fa fa-bars fa-lg" aria-hidden="true"></i></a></button>
+        <nav id="menu">
+            <a href="#" id="btn-fechar">X</a>
+            <ul>
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="#categoria">
+                    <li>Categorias</li>
+                </a>
+                <a href="#section_2">
+                    <li>Faça uma doação</li>
+                </a>
+                <a href="#contato">
+                    <li>Contato</li>
+                </a>
+                <a href="#loginUsuarioModal">
+                    <li>
+                     <div class="card-review">
+                        <div class="login-click">
+                            <div onclick="acao()" class="btn" ><a href="#"><i class="fas fa-sign-in-alt"></i>Entrar</a></div>
+                                <div class="modal">
+                                      <div onclick="fechar()" class="fechar-login"><i class="far fa-window-close"></i></div>
+ 
+                                      <img src="img/default-user-icon.jpg" width="150px" height="150px">
+                                      <br>
+                                      <br><i class="far fa-envelope" id="env"></i></i><input type="email" name="user" placeholder="Username">
+                                      <br><i class="fas fa-lock" id="lock"></i><input type="password" name="password" placeholder="Password">
+                                      <br><button id="btn-log">LOG IN</button>
+                                      <br><input type="checkbox" ><label id="btn-lembrar"> Lembrar sempre </label>
+                                      <br> <button id="btn-register">REGISTRAR</button>
+
+
+
+
+
+
+
+                                    </div>
+                       </div>
+                    </div>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+  
+    <main id="corpo">
+        <section id="section_1">
+            <figure id="galeria">
+                <div id="demo" class="carousel slide" data-ride="carousel">
+                    <ul class="carousel-indicators">
+                        <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        <li data-target="#demo" data-slide-to="1"></li>
+                        <li data-target="#demo" data-slide-to="2"></li>
+                        <li data-target="#demo" data-slide-to="3"></li>
+                    </ul>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="https://lelivros.love/book/baixar-livro-entrelacadas-kanae-minato-em-pdf-epub-mobi-ou-ler-online/"
+                                target="_blank">
+                                <img src="img/slider_img1.jpg" width="500" height="590">
+                            </a>
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://lelivros.love/book/baixar-livro-historia-dos-estados-unidos-leandro-karnal-em-pdf-epub-e-mobi-ou-ler-online/"
+                                target="_blank">
+                                <img src="img/slider_img2.jpg" width="500" height="590">
+                            </a>
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://lelivros.love/book/baixar-livro-o-ultimo-magnata-francis-scott-fitzgerald-em-pdf-epub-mobi-ou-ler-online/"
+                                target="_blank">
+                                <img src="img/slider_img3.jpg" width="500" height="590">
+                            </a>
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://lelivros.love/book/baixar-livro-gigantes-adormecidos-themis-files-vol-01-sylvain-neuvel-em-pdf-epub-e-mobi-ou-ler-online/"
+                                target="_blank">
+                                <img src="img/slider_img4.jpg" width="500" height="590">
+                            </a>
+                            <div class="carousel-caption">
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#demo" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </figure>
+        </section>
+        <div id="categoria">
+            <figure>
+                <a href="#portal1" target="_blank"> Suspense</a>
+            </figure>
+            <figure>
+                <a href="#portal2" target="_blank"> Romance</a>
+            </figure>
+            <figure>
+                <a href="#portal3" target="_blank"> Literatura</a>
+            </figure>
+            <figure>
+                <a href="#portal4" target="_blank"> História</a>
+            </figure>
+            <figure>
+                <a href="#portal5" target="_blank"> Ficção</a>
+            </figure>
+        </div>
+        <hr>
+        <section id="portal1">
+            <div class="portal">
+                <figure>
+                    <img id="bloco" src="img/portal1_img3.jpg">
+                    <span>
+                        <h2>Lua Vermelha</h2>
+                        <p class="autor">Benjamin Percy </p>
+                        <a href="https://plataforma.bvirtual.com.br/Acervo/Publicacao/193348" target="_blank"> Ler
+                            agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal1_img4.jpg">
+                    <span>
+                        <h2>Amigo Imaginário </h2>
+                        <p class="autor">Stephen Chbosky </p>
+                        <a href="https://lelivros.love/book/baixar-livro-amigo-imaginario-stephen-chbosky-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal1_img5.jpg">
+                    <span>
+                        <h2>A Cidade Dos Fantasmas</h2>
+                        <p class="autor">Victoria Schwab </p>
+                        <a href="https://lelivros.love/book/baixar-livro-a-cidade-dos-fantasmas-cassidy-blake-vol-01-victoria-schwab-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal1_img6.jpg">
+                    <span>
+                        <h2>Macbeth</h2>
+                        <p class="autor">Jo Nesbø </p>
+                        <a href="https://lelivros.love/book/baixar-livro-a-cidade-dos-fantasmas-cassidy-blake-vol-01-victoria-schwab-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>  
+            </div>
+        </section>
+        <hr>
+        <section id="portal2">
+            <div class="portal"> 
+                <figure>
+                    <img id="bloco" src="img/portal2_img2.jpg">
+                    <span>
+                        <h2>Velas Escarlates</h2>
+                        <p class="autor"> Aleksandr Grin </p>
+                        <a href="https://lelivros.love/book/baixar-livro-velas-escarlates-aleksandr-grin-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal2_img4.jpg">
+                    <span>
+                        <h2>O Homem da Forca </h2>
+                        <p class="autor">Shirley Jackson </p>
+                        <a href="https://lelivros.love/book/baixar-livro-o-homem-da-forca-shirley-jackson-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal2_img5.jpg">
+                    <span>
+                        <h2>Um Milhão de Pequenas Coisas</h2>
+                        <p class="autor">Jodi Picoult </p>
+                        <a href="https://lelivros.love/book/baixar-livro-um-milhao-de-pequenas-coisas-jodi-picoult-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                
+                <figure>
+                    <img id="bloco" src="img/portal2_img7.jpg">
+                    <span>
+                        <h2>Eu Devia Estar Sonhando</h2>
+                        <p class="autor"> Michel Bussi</p>
+                        <a href="https://lelivros.love/book/baixar-livro-eu-devia-estar-sonhando-michel-bussi-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                
+            </div>
+        </section>
+        <hr>
+        <section id="portal3">
+            <div class="portal">
+                <figure>
+                    <img id="bloco" src="img/portal3_img1.jpg">
+                    <span>
+                        <h2>Introducão à Literatura Fantástica</h2>
+                        <p class="autor"> Tzvetan Todorov</p>
+                        <a href="https://lelivros.love/book/baixar-livro-introducao-a-literatura-fantastica-tzvetan-todorov-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal3_img2.jpg">
+                    <span>
+                        <h2>A História Concisa da Literatura Alemã</h2>
+                        <p class="autor"> Otto Maria Carpeaux </p>
+                        <a href="https://lelivros.love/book/baixar-livro-a-historia-concisa-da-literatura-alema-otto-maria-carpeaux-em-pdf-epub-e-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+            
+                <figure>
+                    <img id="bloco" src="img/portal3_img7.jpg">
+                    <span>
+                        <h2>Como Ler os Russos</h2>
+                        <p class="autor"> Irineu Franco</p>
+                        <a href="https://lelivros.love/book/baixar-livro-como-ler-os-russos-irineu-franco-perpetuo-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal3_img8.jpg">
+                    <span>
+                        <h2>Correntes</h2>
+                        <p class="autor">Olga Tokarczuk</p>
+                        <a href="https://lelivros.love/book/baixar-livro-correntes-olga-tokarczuk-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+            </div>
+        </section>
+        <hr>
+        <section id="portal4">
+            <div class="portal"> 
+                <figure>
+                    <img id="bloco" src="img/portal4_img2.jpg">
+                    <span>
+                        <h2>Brasil, uma História</h2>
+                        <p class="autor"> Eduardo Bueno</p>
+                        <a href="https://lelivros.love/book/baixar-livro-brasil-uma-historia-eduardo-bueno-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal4_img3.jpg">
+                    <span>
+                        <h2>História Antiga: Grécia e Roma</h2>
+                        <p class="autor">Flávia Maria Schlee Eyler </p>
+                        <a href="https://lelivros.love/book/baixar-livro-historia-antiga-grecia-e-roma-flavia-maria-schlee-eyler-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal4_img4.jpg">
+                    <span>
+                        <h2>Trotskismo Norte-Americano</h2>
+                        <p class="autor">James Patrick Cannon </p>
+                        <a href="https://lelivros.love/book/baixar-livro-a-historia-do-trotskismo-norte-americano-james-patrick-cannon-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal4_img5.jpg">
+                    <span>
+                        <h2>O Soldado Brasileiro de Hitler</h2>
+                        <p class="autor">Tarcísio Badaró </p>
+                        <a href="https://lelivros.love/book/baixar-livro-era-um-garoto-o-soldado-brasileiro-de-hitler-uma-historia-real-tarcisio-badaro-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>  
+            </div>
+        </section>
+        <hr>
+        <section id="portal5">
+            <div class="portal">
+                <figure>
+                    <img id="bloco" src="img/portal5_img4.png">
+                    <span>
+                        <h2>Redshirts</h2>
+                        <p class="autor">John Scalzi </p>
+                        <a href="https://lelivros.love/book/baixar-livro-redshirts-john-scalzi-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal5_img6.jpg">
+                    <span>
+                        <h2>Star Wars: Ahsoka</h2>
+                        <p class="autor">E. K. Johnston</p>
+                        <a href="https://lelivros.love/book/baixar-livro-star-wars-ahsoka-e-k-johnston-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal5_img7.jpg">
+                    <span>
+                        <h2>A Rainha de Nada</h2>
+                        <p class="autor"> Holly Black</p>
+                        <a href="https://lelivros.love/book/baixar-livro-a-rainha-de-nada-o-povo-do-ar-vol-3-holly-black-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+                <figure>
+                    <img id="bloco" src="img/portal5_img8.jpg">
+                    <span>
+                        <h2>Os Caçadores de Duna</h2>
+                        <p class="autor">Brian Herbert</p>
+                        <a href="https://lelivros.love/book/baixar-livro-os-cacadores-de-duna-duna-vol-1-brian-herbert-em-pdf-epub-mobi-ou-ler-online/"
+                            target="_blank"> Ler agora</a>
+                    </span>
+                </figure>
+            </div>
+        </section>
+        <hr>
+        <section id="section_2">
+            <h2>Faça uma doação</h2>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-bd0552d5-629f-4bc9-9bdf-524275f5a701"
+                name=MP-payButton class=blue-ar-l-rn-none>Doar 5 Reais</a>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-6ba0e7d5-971b-4236-af3c-adb6fd600e4d"
+                name=MP-payButton class=blue-ar-l-rn-none>Doar 10 Reais</a>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-12db32d1-ee2f-4f2c-804b-94ee8d1fb194"
+                name=MP-payButton class=blue-ar-l-rn-none>Doar 25 Reais</a>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-3d947438-4898-453b-842b-3b35e2c6a352"
+                name=MP-payButton class=blue-ar-l-rn-none>Doar 50 Reais</a>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-11d1afdd-43ec-420d-9cc3-88b3abe60b23"
+                name=MP-payButton class=blue-ar-l-rn-none>Doar 100 Reais</a>
+            <a mp-mode=dftl
+                href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-23ab4f2a-594a-4ceb-87ee-a1d2589f0e89"
+                name=MP-payButton class=blue-ar-l-rn-none> + 100 Reais</a>
+        </section>
+        <hr>
+        <section id="contato">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="section-title">
+                            <h2>Contate-nos</h2>
+                            <p>Caso você tenha alguma proposta de parceria, envio de livro, ou outro assunto e deseja falar
+                                com nossa equipe, entre em contato. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <form action="/" class="mb-4 mb-lg-0">
+                            <div class="form-row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" name="name" class="form-control" id="name"
+                                        placeholder="escreva seu nome" />
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="escreva seu Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Messagem"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light">enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="map">
+                            <iframe
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%20R.%20Cel.%20Fonseca,%20845%20-%20Centro,%20Gravata%C3%AD%20-%20RS,%2094010-190+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                                width="100%" height="350" frameborder="0" style="border: 0;" allowfullscreen=""
+                                aria-hidden="false" tabindex="0"></iframe>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="rodape">
+        <div id="redes-sociais">
+            <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg"
+                    aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"
+                    aria-hidden="true"></i></a>
+            <a target="_blank" href="https://twitter.com/twitter"><i class="fab fa-twitter fa-lg"
+                    aria-hidden="true"></i></i></a>
+            <a target="_blank" href="https://www.whatsapp.com/?lang=pt_br"><i class="fab fa-whatsapp fa-lg"
+                    aria-hidden="true"></i></a>
+            <a target="_blank" href="https://www.google.com/gmail/"><i class="fa fa-envelope fa-lg"
+                    aria-hidden="true"></i></a>
+        </div>
+        <address>
+             &copy;Todos os direitos reservados. Site desenvolvidos por - Gustavo Brum
+            Dorneles - Arthur Moreira - João Aires
+        </address>
+    </footer>
+    <script type="text/javascript" src="js/funcoes.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/pace.min.js"></script>
+</body>
+
+</html>
