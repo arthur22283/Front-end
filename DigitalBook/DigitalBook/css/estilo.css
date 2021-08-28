@@ -1,0 +1,187 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+* {
+  padding: 0%;
+  margin: 0%;
+  list-style: none;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  border: none;
+  font-family: 'Playfair Display', serif;
+}
+
+
+/* inicio barra de rolagem */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(54, 87, 102, 0.664);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(236, 236, 229);
+  border-radius: 20px;
+  border: 3px solid rgb(235, 223, 192);
+}
+
+/* fim da barra de rolagem */
+
+
+body {
+  background-color: white;
+}
+
+/* inicio do carrossel */
+.item img {
+  margin: auto;
+}
+
+.carousel-inner {
+  animation-name: fundocolorido;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+/* fim do carrossel */
+
+/*inicio do login*/
+.modal-header,
+h4,
+.close {
+  background-color: #020202;
+  color: white !important;
+  text-align: center;
+  font-size: 30px;
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  bottom: 0;
+  left: 0;
+  z-index: 10040;
+  overflow: auto;
+  overflow-y: auto;
+}
+
+.modal-footer {
+  background-color: #f9f9f9;
+}
+.modal-footer button{
+  background-color: rgba(110, 51, 51, 0.651);
+  border-color: rgb(138, 50, 50);
+}
+
+/*fim do login*/
+
+/* inicio section2 */
+#doar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 25px;
+}
+
+#doar h2 {
+  color: #000;
+  text-align: center;
+  margin: auto;
+}
+
+#doar a {
+  width: 26%;
+  color: #fff;
+  margin: 10px auto 10px auto;
+  border-radius: 10px;
+  font-size: 12px;
+  text-align: center;
+}
+h3{
+  font-weight: bolder;
+}
+
+hr{
+  width: 100%;
+}
+
+/* fim da section2 */
+
+
+/* inicio contato */
+#contato{
+  margin-top: 20px;
+}
+.map iframe {
+  min-width: 200px;
+  min-height: 548px;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  background-color: #F5F5F5;
+  color: #0d0d0e;
+  height: 70px;
+  font-size: 27px;
+  padding: 10px;
+}
+/* fim contato */
+
+/* inicio do rodape */
+
+footer.nb-footer {
+background: #222;
+border-top: 4px solid #b78c33; }
+footer.nb-footer .about {
+margin: 0 auto;
+margin-top: 40px;
+max-width: 1170px;
+text-align: center; }
+footer.nb-footer .about p {
+font-size: 13px;
+color: #999;
+margin-top: 30px; }
+footer.nb-footer .about .social-media {
+margin-top: 15px; }
+footer.nb-footer .about .social-media ul li a {
+display: inline-block;
+width: 45px;
+height: 45px;
+line-height: 45px;
+border-radius: 50%;
+font-size: 16px;
+color: #f8f6f2;
+border: 1px solid rgba(255, 255, 255, 0.3); }
+footer.nb-footer .about .social-media ul li a:hover {
+background: #b78c33;
+color: #fff;
+border-color: #b78c33; }
+#membros p{
+  text-align: center;
+  color:#fff
+}
+footer.nb-footer .copyright {
+margin-top: 15px;
+background: #111;
+padding: 7px 0;
+color: #999; }
+footer.nb-footer .copyright p {
+margin: auto;
+padding: 0; }
+
+/* fim do rodape */
+
+/* inicio efeito carrossel */
+@keyframes fundocolorido{
+  from{
+      background-color:rgba(2, 2, 2, 0.623);
+  }to{
+      background-color: rgba(150, 146, 146, 0.808);
+  }
+}
+/* fim efeito carrossel */

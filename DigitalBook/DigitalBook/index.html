@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Digital Book</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="Digital book, milhares de livros disponíveis para download de forma gratuita!" />
+  <meta name="keywords" content="books, digital, free book" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" type="text/css" href="css/component.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/estilo.css" type="text/css">
+</head>
+
+<body>
+  <!--INICIO DO CABEÇALHO-->
+  <header id="top">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <img class="navbar-brand" src="img/logo_transparent.png">
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categorias <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#portal1">Suspense</a></li>
+              <li><a href="#portal2">Romance</a></li>
+              <li><a href="#portal3">Literatura</a></li>
+              <li><a href="#portal4">História</a></li>
+              <li><a href="#portal5">Ficção</a></li>
+            </ul>
+          </li>
+          <li><a href="#section_2">Doar</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#contato"><span class="glyphicon glyphicon-user"></span>
+              Contato</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in" data-toggle="modal" data-target="#loginModal"></span>
+              Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--MODAL LOGIN DO CABEÇALHO-->
+  <section id="login">
+    <div class="container">
+      <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+              <form role="form">
+                <div class="form-group">
+                  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Nome de usuário</label>
+                  <input type="text" class="form-control" id="usrname" placeholder="digite seu email">
+                </div>
+                <div class="form-group">
+                  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Senha</label>
+                  <input id="senha" type="senha" class="form-control" placeholder="digite sua senha" name="psw"
+                    required>
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>Lembrar de mim</label>
+                </div>
+                <button type="submit" id="validar" onclick="validar()" value="Entrar"
+                  class="btn btn-warning btn-block"><span class="glyphicon glyphicon-off"></span>
+                  Entrar</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span
+                  class="glyphicon glyphicon-remove"></span> Cancelar</button>
+              <p>Não é um membro? <a href="#">Inscreva-se</a></p>
+              <p>Esqueceu a <a href="#">senha?</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--FIM DO CABEÇALHO-->
+
+  <!-- INCIO DO CARROSSEL -->
+  <aside id="carrosel">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <a href="https://lelivros.love/book/baixar-livro-entrelacadas-kanae-minato-em-pdf-epub-mobi-ou-ler-online/"
+            target="_blank">
+            <img src="img/slider_img1.jpg" alt="..." width="440">
+        </div>
+        <div class="item">
+          <a href="https://lelivros.love/book/baixar-livro-historia-dos-estados-unidos-leandro-karnal-em-pdf-epub-e-mobi-ou-ler-online/"
+            target="_blank">
+            <img src="img/slider_img2.jpg" alt="..." width="440">
+        </div>
+        <div class="item">
+          <a href="https://lelivros.love/book/baixar-livro-gigantes-adormecidos-themis-files-vol-01-sylvain-neuvel-em-pdf-epub-e-mobi-ou-ler-online/"
+            target="_blank">
+            <img src="img/slider_img4.jpg" alt="..." width="440">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </aside>
+  <!--FIM DO CARROSSEL-->
+
+  <!--INICIO LIVROS 3D SUSPENSE-->
+  <section id="portal1">
+    <h2>SUSPENSE</h2>
+    <div class="container ">
+      <div class="wrapper">
+        <ul class="stage clearfix">
+          <li class="scene_suspense">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Como toda adolescente, Claire Forrester se acha meio deslocada. Quando agentes do governo invadem sua
+                  casa e matam seus pais, ela percebe o quanto é diferente. Claire pode se transformar em uma criatura
+                  semelhante a um lobo. Ela é uma licana.
+                  Patrick Gamble entra em um avião e, horas depois, desembarca como o único sobrevivente de um ataque
+                  terrorista promovido pelos licanos. Da noite para o dia, ele vira um herói nacional: o Menino-Milagre.
+                  O governador Chase Williams jura que, se for eleito presidente, protegerá o país da ameaça que
+                  aterroriza a população. Em meio ao acirramento dos conflitos entre humanos e licanos, seu discurso
+                  intensifica a discriminação. No entanto, ele vai se tornar exatamente aquilo que prometeu destruir.
+                  Cada um a seu modo, os três estão envolvidos em uma guerra que tem sido controlada com leis, violência
+                  e
+                  drogas. Mas uma rebelião está prestes a estourar, provocando mortes e destruição e entrelaçando seus
+                  destinos para sempre.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-lua-vermelha-benjamin-percy-em-pdf-epub-mobi-ou-ler-online/#tab-additional_information"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_suspense">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Kate Reese está fugindo.
+                  Determinada a buscar uma vida melhor para ela e para o filho Christopher, ela abandona um
+                  relacionamento
+                  abusivo e escapa no meio da noite junto com seu garotinho. Eles acabam se sentindo atraídos pela
+                  agradável comunidade de Mill Grove, na Pensilvânia, uma cidadezinha distante de tudo e de todos, com
+                  apenas uma estrada de acesso.
+                  A princípio, Mill Grove parece o lugar perfeito para eles se estabelecerem. Porém, Christopher
+                  desaparece por seis longos dias sem deixar nenhum rastro. O desespero toma conta de Kate, e a polícia
+                  da
+                  cidade faz buscas incansáveis para descobrir o paradeiro do menino. Até que ele surge no meio da noite
+                  saindo de um bosque nos limites da cidade. Ileso, mas mudado. Christopher volta com uma voz na cabeça
+                  que apenas ele pode ouvir e com uma missão que apenas ele pode cumprir: construir uma casa na árvore
+                  no
+                  bosque da Mission Street antes do Natal; caso contrário, sua mãe e todos na cidade sofrerão as
+                  consequências.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-amigo-imaginario-stephen-chbosky-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+
+              </div>
+            </div>
+          </li>
+          <li class="scene_suspense">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Cassidy Blake vive uma rotina simples e tranquila com seus pais no subúrbio. Sua vida é perfeitamente
+                  normal – exceto pelo fato de ela conseguir se mover, através do Véu, entre o mundo dos vivos e o do
+                  mortos e por ter como melhor amigo Jacob, um fantasma.
+                  Quando seus pais são convidados por uma emissora de televisão para apresentar um programa sobre os
+                  lugares mais assustadores do mundo, seu cotidiano vira de cabeça para baixo. Em pouco tempo, estão
+                  todos
+                  – Cassidy, seus pais, seu melhor amigo fantasma e Ceifador, seu gato – em direção à superassombrada
+                  Edimburgo, na Escócia, a primeira parada do roteiro do programa… e situações fora do comum começam a
+                  acontecer.
+                  Na Escócia, Cass se vê cercada, para onde quer que olhe, por fantasmas de todos os tipos, e, é claro,
+                  nem todos são gentis e amigáveis. Em meio às incertezas sobre como deve usar seu dom, Cassidy e Jacob
+                  se
+                  deparam com a Rapina Rubra, um espírito maligno e lendário que surge a cada inverno para assombrar a
+                  população local.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-a-cidade-dos-fantasmas-cassidy-blake-vol-01-victoria-schwab-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_suspense">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  A sombria tragédia escrita pelo dramaturgo mais influente do mundo recontada por um dos maiores
+                  autores
+                  de thrillers policiais da atualidade.
+                  Em uma cidade industrial cinzenta e chuvosa na década de 1970, a polícia concentra todos os seus
+                  esforços em acabar com o tráfico de drogas e a violência, bem como a criminalidade que decorre disso.
+                  Duncan, o novo comissário-chefe, é um idealista e um visionário, a favor de uma gestão transparente e
+                  engajado na luta contra qualquer forma de corrupção. Ele é um sonho para a população. E um pesadelo
+                  para
+                  os criminosos.
+                  A missão da polícia não é nada simples. O mercado de drogas da cidade é comandado por dois homens –
+                  Sweno, líder de uma perigosa gangue, e Hécate, um mestre da manipulação, que tem ligações com as
+                  esferas
+                  mais elevadas do poder. Mas Duncan tem uma poderosa arma: Macbeth, o chefe do Grupo de Operações
+                  Especiais, um homem do povo. E também uma pessoa ambiciosa, influenciável e com tendências paranoicas
+                  e
+                  violentas.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-macbeth-hogarth-shakespeare-vol-07-jo-nesbo-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--FIM DOS LIVROS 3D SUSPENSE-->
+
+  <!--FIM DOS LIVROS 3D ROMANCE-->
+  <section id="portal2">
+    <h2>ROMANCE</h2>
+    <div class="container">
+      <div class="wrapper">
+        <ul class="stage clearfix">
+          <li class="scene_romance">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Ruth Jefferson é enfermeira obstetra com mais de vinte anos de experiência em um hospital de
+                  Connecticut. Durante seu turno, Ruth inicia exames de rotina em um recém-nascido, mas instantes depois
+                  é transferida para cuidar de outro paciente. Os pais do bebê são supremacistas brancos e não querem
+                  que Ruth, que é negra, toque em seu filho. O hospital atende ao pedido deles, mas, no dia seguinte, o
+                  bebê sofre um problema cardíaco enquanto Ruth está sozinha no berçário. Ela obedece às ordens ou
+                  intervém?
+
+                  Ruth hesita antes de realizar os procedimentos de reanimação e, como resultado, é acusada de um crime
+                  grave. Kennedy McQuarrie, uma defensora pública branca, aceita seu caso, mas dá um conselho
+                  inesperado: ela insiste que mencionar raça no tribunal não é uma boa estratégia. Confusa com o
+                  conselho, Ruth tenta manter a vida o mais normal possível para sua família ― especialmente para seu
+                  filho adolescente ― quando o caso se torna sensação na mídia.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-um-milhao-de-pequenas-coisas-jodi-picoult-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_romance">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Aleksandr Grin escreveu um livro em que os sonhos mais extravagantes se tornam realidade. Escrita no
+                  início do século XX, na Rússia recém-socialista, onde o realismo e a luta de classes deveriam ser o
+                  objetivo final da arte, esta história simples presta homenagem ao romantismo e à eterna necessidade
+                  humana de sonhar e de ter esperança. Bastante simbólica, Velas Escarlates, de 1923, fala sobre a fé
+                  inabalável em milagres e em sonhos sublimes e triunfais, e é considerada uma das melhores obras do
+                  autor.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-velas-escarlates-aleksandr-grin-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+
+              </div>
+            </div>
+          </li>
+          <li class="scene_romance">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Vinte anos atrás, em um voo para Montreal, a comissária de bordo Nathalie encontrou a chance de viver
+                  um grande amor que abalou sua vida tranquila como esposa e mãe. Um amor cujo desfecho ela até hoje não
+                  ousa confessar.
+                  Agora, estranhos sinais sem causa aparente vêm se acumulando. Ela é escalada para os mesmos três voos
+                  de vinte anos antes. Na mesma ordem: Montreal, Los Angeles, Jacarta. Com a mesma equipe, coisa rara de
+                  acontecer. Uma música no rádio, pequenos elementos que se repetem, um passageiro cantando versos que
+                  só ela poderia conhecer. Quem – ou que força misteriosa – estará por trás dessas supostas
+                  coincidências?
+                  Quando passado e presente são repetidos a ponto de desafiar uma explicação racional, Nathy se vê
+                  forçada a enfrentar seu passado, mesmo tendo jurado jamais olhar para trás.
+                  Em um jogo de espelhos entre 1999 e 2019, Eu devia estar sonhando percorre uma trilha surpreendente,
+                  repleta de paixão e suspense, e prova que as mais belas histórias de amor nunca morrem.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-eu-devia-estar-sonhando-michel-bussi-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_romance">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Natalie Waite tem dezessete anos e só pensa em sair logo da casa dos pais e entrar na universidade;
+                  ela sonha em ser livre. Seu pai é um escritor cheio de si, bastante dominador quando se trata de
+                  Natalie e sua mãe. Contudo, quando a menina finalmente consegue ir para a faculdade, as coisas não se
+                  desenrolam como o planejado e ela não encontra a felicidade que tanto desejava.
+                  Pouco a pouco, todas as certezas de Natalie evaporam, e ela não é mais capaz de compreender onde
+                  termina a realidade e onde começa sua sombria alucinação.
+                  Inspirado pelo desaparecimento de uma estudante universitária que vivia perto da casa de Shirley
+                  Jackson, O homem da forca conta uma história assombrosa e inquietante sobre loucura e obsessão
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-o-homem-da-forca-shirley-jackson-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--FIM DOS LIVROS 3D ROMANCE-->
+
+  <!--FIM DOS LIVROS 3D LITERATURA-->
+  <section id="portal3">
+    <h2>Literatura</h2>
+    <div class="container">
+      <div class="wrapper">
+        <ul class="stage clearfix">
+          <li class="scene_literatura">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Partindo de uma revisão da Teoria dos Gêneros, o autor transporta o leitor ao âmago do fantástico,
+                  definindo-o pelo preenchimento de três condições – uma, ligada ao mundo das personagens, outra, a uma
+                  hesitação entre o natural e o sobrenatural e a terceira, em que se exige escolher um entre os vários
+                  modos ou níveis de leitura. Constrói-se, assim, uma rede de relações com o mundo, com a percepção e o
+                  olhar, como também uma relação com o outro, o inconsciente e a linguagem.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-introducao-a-literatura-fantastica-tzvetan-todorov-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_literatura">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  A Literatura alemã está na origem de toda a cultura ocidental. Filósofos como Hegel, Marx, Nietzsche,
+                  Schopenhauer, Heidegger; A reforma protestante com Luthero; Romancistas e poetas como Kafka e Goethe;
+                  e ainda na música, nas artes plásticas, na literatura da Psicanálise com Freud e Jung, enfim, uma
+                  influência gigantesca na vida, no pensamento e na forma como vivemos.Nesta Obra de Otto Maria Carpeaux
+                  você encontra uma síntese dos grandes momentos, livros e autores da literatura alemã, e conta com uma
+                  avaliação crítica de sua importância para a cultura e o desenvolvimento do país e sua influência nos
+                  principais movimentos culturais do mundo contemporâneo. Uma forma concisa de conhecer a literatura da
+                  “Terra dos poetas e pensadores”.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-a-historia-concisa-da-literatura-alema-otto-maria-carpeaux-em-pdf-epub-e-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+
+              </div>
+            </div>
+          </li>
+          <li class="scene_literatura">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  É seguro dizer que o leitor brasileiro é fascinado pela literatura russa. A despeito da dificuldade do
+                  idioma, das diferenças culturais e da enorme distância que nos separa, há décadas a literatura russa
+                  se embrenhou na nossa cultura e conquistou o público. Escrito pelo tradutor e estudioso Irineu Franco
+                  Perpetuo, este livro se pretende um passeio guiado pelos escritos de autores como Gógol, Dostoiévski e
+                  Tolstói, entre muitos outros. Mais que isso, oferece também uma vista panorâmica da literatura russa,
+                  ligando as obras aos acontecimentos políticos, os autores aos movimentos literários da Europa.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-como-ler-os-russos-irineu-franco-perpetuo-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_literatura">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Uma mescla de ensaio e livro de viagens — tudo com uma criatividade quase inesgotável.
+                  “Minha energia vem do movimento — do chacoalhar dos ônibus, do barulho dos aviões, do balançar das
+                  balsas e dos trens”, escreve a narradora deste livro único, que investiga as possibilidades do gênero
+                  romanesco para falar sobre o corpo, o mundo e as estratégias sempre insuficientes com as quais
+                  tentamos mapeá-los. Inquieto como ela, Correntes não para nem por um segundo: de ônibus, avião, trem e
+                  barco, o texto a acompanha em saltos de país em país, de tempos a tempos, de história a história,
+                  compondo um panorama do nomadismo moderno.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-correntes-olga-tokarczuk-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--FIM DOS LIVROS 3D LITERATURA-->
+
+  <!--FIM DOS LIVROS 3D HISTÓTIA-->
+  <section id="portal4">
+    <h2>HISTÓRIA</h2>
+    <div class="container">
+      <div class="wrapper">
+        <ul class="stage clearfix">
+          <li class="scene_historia">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Algumas histórias são tão boas e fascinantes que parecem fruto da mais pura imaginação. A história do
+                  garoto brasileiro que, morando em Berlim, na Alemanha dos pais, vai à padaria e se vê recrutado à
+                  força para servir ao exército nazista é daqueles enredos que te prendem de imediato. A partir de um
+                  pequeno diário caindo aos pedaços que lhe chegou às mãos por acaso, o jornalista Tarcísio Badaró
+                  escreveu uma história que reúne aventura, drama, relatos de guerra, anotações de viagem e sentimentos
+                  humanos variados. Horst Brenke, o nosso garoto em questão, deixou um registro cru e emocionante que
+                  jamais havia sido lido antes. Com ele, vamos direto ao cenário da Segunda Guerra Mundial em seus
+                  momentos finais, num mundo destroçado pela barbárie. Sua saga inclui a prisão nos famigerados campos
+                  russos, o trabalho escravo em condições perversas, a vida como indigente na Itália
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-era-um-garoto-o-soldado-brasileiro-de-hitler-uma-historia-real-tarcisio-badaro-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_historia">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  A história do Brasil como você nunca viu antes! Há mais de cinco séculos diz-se que o Brasil é o país
+                  do futuro. O problema, é que nunca chegamos lá. Procurando sanar esse problema, Eduardo Bueno tira a
+                  História da prisão das salas de aula e a leva para as ruas. Transforma-a em conversa de mesa de bar, a
+                  leva para favelas, esquinas, ruas, shoppings, estádios de futebol. Em Brasil – Uma história, Eduardo
+                  Bueno atualiza seu famoso livro, incluindo fatos como a posse de Dilma Roussef e o julgamento do
+                  Mensalão.Sobre o AutorNascido em Porto Alegre, no ano de 1958, Eduardo Bueno atualmente é jornalista,
+                  tradutor e escritor. Iniciou no mercado de trabalho aos 17 anos como repórter do jornal Zero Hora, de
+                  onde ganhou o apelido de Peninha. Bueno atuou também como editor, roteirista e tradutor e trabalhou em
+                  outros veículos de comunicação. O escritor também participou do programa para jovens Pra começo de
+                  Conversa, da TV Educativa de Porto Alegre.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-brasil-uma-historia-eduardo-bueno-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_historia">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Neste maravilhoso livro, Haroldo Dutra Dias traz ensinamentos do Antigo Testamento, Novo Testamento,
+                  das Obras Básicas e outras obras da literatura espírita – principalmente as obras de Emmanuel e André
+                  Luiz – com explicações e orientações para o momento que estamos vivendo. Aborda de forma clara, leve e
+                  didática, temas relevantes diante dos desafios e atribulações da transição planetária. Com isso, nos
+                  auxilia a DESPERTAR a força, riqueza e grandiosidade do espírito imortal que somos. Ele nos esclarece
+                  sobre: Causas das aflições Justiça divina – O segredo da reforma íntima – Nossa relação com Deus –
+                  Descobrindo quem eu sou – Fraquezas da alma – Educar sentimentos – É tempo de renovar – Pensamento e
+                  vida – Bem-aventurados os mansos e pacíficos – O homem de bem – Pátria do Evangelho e a transição
+                  planetária – Qual o sentido da sua vida? – A felicidade é deste mundo? – Quem são os trabalhadores da
+                  última hora?
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-historia-antiga-grecia-e-roma-flavia-maria-schlee-eyler-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_historia">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Desde suas origens em 1928 até a fundação do Socialist Workers Party, SWP, em 1938. Nesta obra, James
+                  P Cannon relata a história do SWP (Socialist Workers Party), corrente política norte-americana que
+                  integrou a Oposição de Esquerda e em seguida a IV Internacional, desenvolvendo experiências memoráveis
+                  no movimento operário dos Estados Unidos nos anos da Grande Depressão. Ao longo de doze conferências
+                  Cannon narra experiências de enorme atualidade quando se pensa a construção de uma agrupação
+                  revolucionária na perspectiva de fundir-se à classe trabalhadora.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-a-historia-do-trotskismo-norte-americano-james-patrick-cannon-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--FIM DOS LIVROS 3D HISTÓRIA-->
+
+  <!--FIM DOS LIVROS 3D FICÇÃO-->
+  <section id="portal5">
+    <h2>FICÇÃO</h2>
+    <div class="container">
+      <div class="wrapper">
+        <ul class="stage clearfix">
+          <li class="scene_ficao">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Ele será a destruição da coroa e a ruína do trono. O poder é mais fácil de adquirir do que de manter.
+                  Jude aprendeu a lição mais difícil de sua vida quando abdicou do controle do Rei Cardan em troca de um
+                  poder imensurável. Agora, ela carrega o outrora impensável título de Grande Rainha de Elfhame, mas as
+                  condições são longe de ser ideais. Exilada por Cardan no mundo mortal, Jude se encontra impotente e
+                  frustrada enquanto planeja reivindicar tudo que Cardan tomou dela. A oportunidade surge com sua irmã
+                  gêmea, cuja vida está em perigo. Para salvá-la de uma situação tenebrosa envolvendo Locke, Jude decide
+                  voltar ao Reino das Fadas se passando por Taryn. Antes disso, porém, ela precisa confrontar os
+                  próprios sentimentos contraditórios pelo rei que a traiu. No entanto, ao voltar a Elfhame, Jude
+                  constata que tudo mudou. A guerra está prestes a eclodir, e ela caminha próximo a seus inimigos.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-a-rainha-de-nada-o-povo-do-ar-vol-3-holly-black-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_ficao">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Ahsoka Tano, leal aprendiz Jedi de Anakin Skywalker, planejou passar o resto de sua vida servindo à
+                  Ordem Jedi. Mas, após uma dolorosa traição, deixou a Ordem e seguiu seu próprio caminho; imaginando
+                  que Anakin e os outros Jedi ainda estariam lá sempre que precisasse deles – ou eles precisassem dela.
+                  Então o Imperador assumiu a galáxia, e os Jedi foram cruelmente assassinados. Agora Ahsoka está
+                  realmente sozinha, sentindo-se incapaz de fazer parte de algo maior novamente. Refugiada em um remoto
+                  planeta agrícola, onde fez amizade com uma jovem chamada Kaeden, começa a criar uma vida simples para
+                  si. Mas Ahsoka não pode escapar de seu passado ou do alcance do Império. Quando as forças imperiais
+                  ocupam o planeta, ela precisa decidir se deve se envolver – mesmo que isso exponha sua identidade.
+                  Suas escolhas terão efeitos devastadores para quem a rodeia… e poderão levá-la a uma nova esperança
+                  para a galáxia.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-star-wars-ahsoka-e-k-johnston-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_ficao">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  A saga Duna original, escrita por Frank Herbert, consiste em seis títulos que são clássicos da ficção
+                  científica, porém está saga é incompleta. Em AS HERDEIRAS DE DUNA, o último livro escrito por Frank
+                  Herbert, deixou muitas pontas soltas e perguntas no final. O autor esperava fechar a história, quando
+                  a morte o surpreendeu. Depois de duas trilogias: o prelúdio de Duna e as Lendas de Duna, agora vem o
+                  que foi o mais difícil desafio para os escritores Brian Herbert e Kevin J. Anderson: escrever o final
+                  desta maravilhosa saga, que deveria ter sido o sétimo e último livro de Duna, a partir das notas e os
+                  projetos que deixou Frank Herbert. Caçadores de Duna é o primeiro de dois livros que vem para fechar a
+                  série mítica e fascinante original de Frank Herbert. Caçadores de Duna (Hunters of Dune) recupera os
+                  temas explorados em O IMPERADOR-DEUS DE DUNA, OS HEREGES DE DUNA e, AS HERDEIRAS DE DUNA.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-os-cacadores-de-duna-duna-vol-1-brian-herbert-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="scene_ficao">
+            <div class="movie" onclick="return true">
+              <div class="poster"></div>
+              <div class="info">
+                <p>
+                  Vencedor do Prêmio Hugo de melhor romance, Redshirts é uma ficção científica bem-humorada sobre as
+                  famosas missões espaciais de exploração que sempre acabam em tragédia… Menos para os oficiais
+                  superiores.
+
+                  O alferes Andrew Dahl acaba de ser designado para a nave almirante da União Universal, a Intrepid. É
+                  um posto de prestígio, mas sua empolgação desaparece quando começa a perceber que um tripulante de
+                  baixa patente é morto a cada missão de campo, e que apenas três oficiais acabam sobrevivendo aos
+                  confrontos letais com forças alienígenas.
+                  Não surpreende, então, que Andrew tente evitar ir a campo a todo custo, até descobrir uma informação
+                  que revelará a todos o que a nave estelar Intrepid realmente é… E uma oportunidade louca e perigosa
+                  para se salvarem.
+                </p>
+                <span>
+                  <a href="https://lelivros.love/book/baixar-livro-redshirts-john-scalzi-em-pdf-epub-mobi-ou-ler-online/"
+                    target="_blank"> Ler agora</a>
+                </span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!--FIM DOS LIVROS 3D FICÇÃO-->
+
+  <!--INICIO DOAÇÃO-->
+  <section id="doar">
+    <h3>Faça uma doação</h3>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-bd0552d5-629f-4bc9-9bdf-524275f5a701"
+      name=MP-payButton class=blue-ar-l-rn-none>Doar 5 Reais</a>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-6ba0e7d5-971b-4236-af3c-adb6fd600e4d"
+      name=MP-payButton class=blue-ar-l-rn-none>Doar 10 Reais</a>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-12db32d1-ee2f-4f2c-804b-94ee8d1fb194"
+      name=MP-payButton class=blue-ar-l-rn-none>Doar 25 Reais</a>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-3d947438-4898-453b-842b-3b35e2c6a352"
+      name=MP-payButton class=blue-ar-l-rn-none>Doar 50 Reais</a>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-11d1afdd-43ec-420d-9cc3-88b3abe60b23"
+      name=MP-payButton class=blue-ar-l-rn-none>Doar 100 Reais</a>
+    <a mp-mode=dftl
+      href="https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=478802535-23ab4f2a-594a-4ceb-87ee-a1d2589f0e89"
+      name=MP-payButton class=blue-ar-l-rn-none> + 100 Reais</a>
+  </section>
+  <hr>
+  <!--FIM DOAÇÃO-->
+
+  <!-- INICIO DO CONTATO-->
+  <section id="contato">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="well well-sm">
+            <form class="form-horizontal" method="post">
+              <fieldset>
+                <legend class="text-center header">Contato</legend>
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-1">
+                    <input id="fname" name="name" type="text" placeholder="Nome" class="form-control">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-1">
+                    <input id="lname" name="name" type="text" placeholder="Sobrenome" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-1">
+                    <input id="email" name="email" type="text" placeholder="Endereço de email" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-1">
+                    <input id="phone" name="phone" type="text" placeholder="Telefone" class="form-control">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-10 col-md-offset-1">
+                    <textarea class="form-control" id="message" name="message"
+                      placeholder="Escreva sua mensagem para nós aqui. Nós entraremos em contato" rows="7"></textarea>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="col-md-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div>
+            <div class="panel panel-default">
+              <div class="map">
+                <iframe
+                  src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=%20R.%20Cel.%20Fonseca,%20845%20-%20Centro,%20Gravata%C3%AD%20-%20RS,%2094010-190+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                  width="600" height="350" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
+                  tabindex="0">
+                </iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--FIM DO CONTATTO-->
+
+  <!-- INICIO DO RODAPE-->
+  <section id="rodape">
+    <footer class="nb-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="about">
+              <div class="social-media">
+                <ul class="list-inline">
+                  <li><a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg"
+                        aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook fa-lg"
+                        aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href="https://twitter.com/twitter"><i class="fab fa-twitter fa-lg"
+                        aria-hidden="true"></i></i></a></li>
+                  <li><a target="_blank" href="https://www.whatsapp.com/?lang=pt_br"><i class="fab fa-whatsapp fa-lg"
+                        aria-hidden="true"></i></a></li>
+                  <li><a target="_blank" href="https://www.google.com/gmail/"><i class="fa fa-envelope fa-lg"
+                        aria-hidden="true"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <address id="membros">
+            <p>Copyright © 2021. Todos os direitos reservados.</p>
+          </address>
+        </div>
+      </div>
+    </footer>
+  </section>
+  <!-- FIM DO RODAPE-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script type="text/javascript" src="js/funcoes.js"></script>
+</body>
+
+</html>

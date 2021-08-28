@@ -1,0 +1,227 @@
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+h2 {
+	text-align: center;
+}
+
+.wrapper {
+	margin: 0 auto 100px auto;
+	width: 100%;
+}
+
+.stage {
+	list-style: none;
+	padding: 0;
+}
+
+.scene_suspense,
+.scene_romance,
+.scene_literatura,
+.scene_historia,
+.scene_ficao {
+	width: 250px;
+	height: 400px;
+	margin: 17px;
+	margin-top: 100px;
+	float: left;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.movie {
+	width: 250px;
+	height: 400px;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-transform: translateZ(-130px);
+	-moz-transform: translateZ(-130px);
+	transform: translateZ(-130px);
+	-webkit-transition: -webkit-transform 350ms;
+	-moz-transition: -moz-transform 350ms;
+	transition: transform 350ms;
+}
+
+.movie:hover {
+	-webkit-transform: rotateY(-78deg) translateZ(20px);
+	-moz-transform: rotateY(-78deg) translateZ(20px);
+	transform: rotateY(-78deg) translateZ(20px);
+}
+
+.movie .poster,
+.movie .info {
+	position: absolute;
+	width: 250px;
+	height: 400px;
+	background-color: #fff;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.movie .poster {
+	-webkit-transform: translateZ(130px);
+	-moz-transform: translateZ(130px);
+	transform: translateZ(130px);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.movie .info {
+	-webkit-transform: rotateY(90deg) translateZ(130px);
+	-moz-transform: rotateY(90deg) translateZ(130px);
+	transform: rotateY(90deg) translateZ(130px);
+	border: 1px solid #B8B5B5;
+	font-size: 0.75em;
+}
+
+.csstransforms3d .movie::after {
+	content: '';
+	width: 260px;
+	height: 260px;
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+	-webkit-transform-origin: 100% 100%;
+	-moz-transform-origin: 100% 100%;
+	transform-origin: 100% 100%;
+	-webkit-transform: rotateX(90deg) translateY(130px);
+	-moz-transform: rotateX(90deg) translateY(130px);
+	transform: rotateX(90deg) translateY(130px);
+	-webkit-transition: box-shadow 350ms;
+	-moz-transition: box-shadow 350ms;
+	transition: box-shadow 350ms;
+}
+
+.csstransforms3d .movie:hover::after {
+	box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+}
+
+.info p {
+	padding: 1.2em 1.4em;
+	margin: 2px 0 0;
+	text-align: justify;
+	font-weight: 700;
+	color: #666;
+	line-height: 1.4em;
+	border-top: 10px solid #555;
+}
+ h2 {
+	font-size: 3em;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	background-color: rgba(114, 114, 117, 0.555);
+	font-weight: bolder;
+}
+
+.csstransforms3d .movie .poster {
+	box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0);
+}
+
+.csstransforms3d .movie:hover .poster {
+	box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8);
+}
+
+.scene_suspense:nth-child(1) .movie .poster {
+	background-image: url(../img/portal1_img1.jpg);
+}
+
+.scene_suspense:nth-child(2) .poster {
+	background-image: url(../img/portal1_img2.jpg);
+}
+
+.scene_suspense:nth-child(3) .poster {
+	background-image: url(../img/portal1_img3.jpg);
+}
+
+.scene_suspense:nth-child(4) .poster {
+	background-image: url(../img/portal1_img4.jpg);
+}
+
+.scene_romance:nth-child(1) .movie .poster {
+	background-image: url(../img/portal2_img1.jpg);
+}
+
+.scene_romance:nth-child(2) .poster {
+	background-image: url(../img/portal2_img2.jpg);
+}
+
+.scene_romance:nth-child(3) .poster {
+	background-image: url(../img/portal2_img3.jpg);
+}
+
+.scene_romance:nth-child(4) .poster {
+	background-image: url(../img/portal2_img4.jpg);
+}
+
+.scene_literatura:nth-child(1) .movie .poster {
+	background-image: url(../img/portal3_img1.jpg);
+}
+
+.scene_literatura:nth-child(2) .poster {
+	background-image: url(../img/portal3_img2.jpg);
+}
+
+.scene_literatura:nth-child(3) .poster {
+	background-image: url(../img/portal3_img3.jpg);
+}
+
+.scene_literatura:nth-child(4) .poster {
+	background-image: url(../img/portal3_img4.jpg);
+}
+
+.scene_historia:nth-child(1) .movie .poster {
+	background-image: url(../img/portal4_img1.jpg);
+}
+
+.scene_historia:nth-child(2) .poster {
+	background-image: url(../img/portal4_img2.jpg);
+}
+
+.scene_historia:nth-child(3) .poster {
+	background-image: url(../img/portal4_img3.jpg);
+}
+
+.scene_historia:nth-child(4) .poster {
+	background-image: url(../img/portal4_img4.jpg);
+}
+
+.scene_ficao:nth-child(1) .movie .poster {
+	background-image: url(../img/portal5_img1.jpg);
+}
+
+.scene_ficao:nth-child(2) .poster {
+	background-image: url(../img/portal5_img2.jpg);
+}
+
+.scene_ficao:nth-child(3) .poster {
+	background-image: url(../img/portal5_img3.jpg);
+}
+
+.scene_ficao:nth-child(4) .poster {
+	background-image: url(../img/portal5_img4.png);
+}
+
+.no-csstransforms3d .movie .poster,
+.no-csstransforms3d .movie .info {
+	position: relative;
+}
+
+@media screen and (max-width: 60.75em) {
+
+	.scene_suspense,
+	.scene_romance,
+	.scene_literatura,
+	.scene_historia,
+	.scene_ficao {
+		float: none;
+		margin: 30px auto 60px;
+	}
+}
